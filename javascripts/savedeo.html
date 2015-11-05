@@ -10,9 +10,15 @@
  
 <div id="log"></div>
 <script>
-$( document ).ready(function() {
-	getURL(678483);
+$(document).ready(function() {
+$("button").click(function(){
+    $.get("https://www.savedeo.com/download?url=http://www.redtube.com/678483", function(data, status){
+        alert("Data: " + data + "\nStatus: " + status);
+    });
+});	
+	//getURL(678483);
 });
 </script>
+<button>Send an HTTP GET request to a page and get the result back</button>
 </body>
 </html>
